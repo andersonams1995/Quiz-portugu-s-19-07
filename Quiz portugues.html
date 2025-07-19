@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz de Português</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f1ff;
+            color: #2e1f47;
+            margin: 40px;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .questao {
+            background-color: #efe2ff;
+            border: 1px solid #cba7f7;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .questao h3 {
+            margin-top: 0;
+        }
+        .alternativa {
+            display: block;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            text-align: left;
+        }
+        .alternativa:hover {
+            background-color: #e2c9ff;
+        }
+        .alternativa.certa {
+            background-color: #c8f7c5 !important;
+            border-color: #4caf50;
+        }
+        .alternativa.errada {
+            background-color: #f8caca !important;
+            border-color: #e53935;
+        }
+        .score {
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+<div class="quiz-container">
+    <h1>Quiz de Português - 15 Questões</h1>
+
+    <!-- QUESTÕES -->
+    <div class="questao"><h3>1. Assinalar a alternativa em que todos os ditongos são decrescentes.</h3>
+        <div class="alternativa" onclick="verificarResposta(this, false)">a) mais, espontâneo, saiu</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">b) beiço, mágoa, maneira</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">c) põe, irmão, possui</div>
+        <div class="alternativa" onclick="verificarResposta(this, true)">d) áurea, nódoa, tênue</div>
+    </div>
+
+    <div class="questao"><h3>2. No trecho "Quanto ao morro do Curvelo..." temos:</h3>
+        <div class="alternativa" onclick="verificarResposta(this, false)">a) 4 ditongos decrescentes, 2 ditongos crescentes, 1 hiato.</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">b) 6 ditongos decrescentes, 2 ditongos crescentes, 2 hiatos.</div>
+        <div class="alternativa" onclick="verificarResposta(this, true)">c) 6 ditongos decrescentes, 1 ditongo crescente, 1 hiato.</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">d) 6 ditongos decrescentes, 2 ditongos crescentes, 1 hiato.</div>
+    </div>
+
+    <div class="questao"><h3>3. Paroxítonas: Aponte a alternativa correta:</h3>
+        <div class="alternativa" onclick="verificarResposta(this, false)">a) textil - condor - mister - zenite - crisantemo</div>
+        <div class="alternativa" onclick="verificarResposta(this, true)">b) luzidio - latex - inaudito - primata - libido</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">c) exodo - fagocito - bramane - obus - refem</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">d) novel - sutil - inclito - improbo - interim</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">e) tulipa - refrega - filantropo - especime - noctivago</div>
+    </div>
+
+    <div class="questao"><h3>4. Assinale a única afirmativa incorreta:</h3>
+        <div class="alternativa" onclick="verificarResposta(this, false)">a) Insônia há um ditongo oral crescente.</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">b) Quando há um ditongo nasal crescente.</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">c) Raios há um tritongo.</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">d) Também há um ditongo nasal decrescente.</div>
+        <div class="alternativa" onclick="verificarResposta(this, true)">e) Pior há um hiato.</div>
+    </div>
+
+    <div class="questao"><h3>5. Não são paroxítonas as palavras:</h3>
+        <div class="alternativa" onclick="verificarResposta(this, false)">a) salada - varanda - tarde</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">b) leite - escada - senhora</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">c) violetas - brigas - mesa</div>
+        <div class="alternativa" onclick="verificarResposta(this, true)">d) amanhã - última - perdão</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">e) verdade - presença - janela</div>
+    </div>
+
+    <div class="questao"><h3>6. Erro na divisão silábica:</h3>
+        <div class="alternativa" onclick="verificarResposta(this, false)">a) flui-do, sa-guão, dig-no</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">b) cir-cuns-cre-ver, trans-cen-den-tal, tran-sal-pi-no</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">c) con-vic-ção, tung-stê-nio, rit-mo</div>
+        <div class="alternativa" onclick="verificarResposta(this, true)">d) ins-tru-ir, an-te-pas-sa-do, se-cre-ta-ri-a</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">e) co-o-pe-rar, dis-tân-cia, bi-sa-vô</div>
+    </div>
+
+    <div class="questao"><h3>7. Separação silábica correta:</h3>
+        <div class="alternativa" onclick="verificarResposta(this, false)">a) Mas-si-nis-sa, i-gu-al, miú-da</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">b) Cons-truir, igual, cri-ei</div>
+        <div class="alternativa" onclick="verificarResposta(this, true)">c) Cri-ei, as-pec-to, mi-ú-da</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">d) Me-da-lhões, pás-sa-ros, es-ta-çõ-es</div>
+    </div>
+
+    <div class="questao"><h3>8. Erro de acentuação gráfica:</h3>
+        <div class="alternativa" onclick="verificarResposta(this, true)">a) apóiam - obliqúe - averigúe</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">b) inexcedível - influí - enjôo</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">c) cauím - egoísta - contêm</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">d) órgão - estréiam - saúva</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">e) concluí - além-túmulo - médium</div>
+    </div>
+
+    <div class="questao"><h3>9. Palavras com a mesma regra de acentuação:</h3>
+        <div class="alternativa" onclick="verificarResposta(this, true)">a) atrás - haverá - também - após</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">b) insônia - nível - pólen - película</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">c) pés - lá - já - troféu</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">d) centímetros - escrúpulos - fósseis</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">e) pára - táxi - fácil - tirá-lo</div>
+    </div>
+
+    <div class="questao"><h3>10. Acento de após e órgãos:</h3>
+        <div class="alternativa" onclick="verificarResposta(this, true)">a) Paroxítona terminada em s e proparoxítona.</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">b) Oxítona terminada em o e paroxítona terminada em ditongo.</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">c) Proparoxítona e paroxítona terminada em s.</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">d) Monossílabo tônico e oxítona terminada em o seguido de s.</div>
+        <div class="alternativa" onclick="verificarResposta(this, false)">e) Proparoxítona e proparoxítona.</div>
+    </div>
+
+    <!-- SCORE -->
+    <div class="score" id="score">Acertos: 0 | Erros: 0</div>
+</div>
+
+<script>
+    let acertos = 0;
+    let erros = 0;
+
+    function verificarResposta(elemento, correta) {
+        if (elemento.classList.contains("certa") || elemento.classList.contains("errada")) return;
+        if (correta) {
+            elemento.classList.add("certa");
+            acertos++;
+        } else {
+            elemento.classList.add("errada");
+            erros++;
+        }
+        document.getElementById("score").innerText = "Acertos: " + acertos + " | Erros: " + erros;
+    }
+</script>
+</body>
+</html>
